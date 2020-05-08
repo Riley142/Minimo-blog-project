@@ -1,0 +1,204 @@
+/* Colors
+#f3f2ef - background - dirty white
+#626262 - main font - grey
+#b4ad9e - Category font color - dirty beige
+#d39a1f - Accent - Gold
+#0c0c0c - Other fonts - washed black
+*/
+
+/* Navigation */
+
+body { background-color: #f3f2ef; }
+
+nav {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items:flex-start;
+}
+
+.logo {
+    color: #0c0c0c;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    padding: 2rem;
+}
+
+a:link  { color: #b4ad9e;}
+a:visited  { color: #b4ad9e;}
+a:hover  { color:#d39a1f; text-decoration: underline 3px solid #b4ad9e;}
+a:active  { color:#0c0c0c;}
+
+/* Header */
+
+.hero {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 960px ;
+    height: 80vh;
+    background-image: url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Blog*/
+
+article {
+    max-width: 960px;
+    margin: auto;
+}
+
+article a {
+    text-decoration: none ;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;;
+    font-size: 0.75rem;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #626262;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+    color: #626262;
+    font-size: 0.9rem;
+}
+
+.post1 { margin: 6rem 5rem; }
+
+.post2, .post3 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-auto-rows: auto;
+    gap:1rem;
+}
+
+/* Newsletter */
+
+.newstletter {
+    background: #ffffff;
+    text-align: center;
+    padding: 4rem;
+    margin: 4rem 0;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: #4f4f4f;
+
+}
+input[type="email"] {
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid #0c0c0c;
+    font-family: 'Playfair Display', serif;;
+}
+
+button {
+    border: none;
+    background-color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+button:hover {
+    color: #d39a1f;
+}
+
+/* Footer */
+
+footer {
+    max-width: 960px;
+    margin: 3rem auto -0.25rem auto;
+    background-color: white;
+    height: 80px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+    "flinks . social"
+    ;
+}
+
+.flinks {
+    grid-area: flinks;
+    font-size: 1.25rem;
+    display: flex;
+    align-self: center;
+}
+
+.social {
+    grid-area: social;
+    align-self: center;
+    display: flex;
+}
+
+.social img {
+    padding: 1.5rem;
+    align-self: center;
+}
+
+.social p {
+    align-self: center;
+    color: #0c0c0c;
+    font-size: 1.25rem;
+}
+
+.flinks a {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #0c0c0c;
+}
+.flinks a:hover {
+    color: #d39a1f;
+}
+
+
+
+/* Media queries */
+
+@media screen and (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero { height: 80vh; }
+
+    .post1 { margin: 6rem 0.25rem; }
+
+    .post2 {
+        gap:2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+         nav ul {
+             display: block;
+             text-align: center;
+             letter-spacing: 0.75rem;
+             padding: 0.5rem;
+         }
+         .hero { height: 65vh; }
+}
